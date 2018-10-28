@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="929.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.batalha.controller.TelaController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <SplitPane dividerPositions="0.2505567928730512, 0.7505567928730512" focusTraversable="true" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+               <items>
+                  <AnchorPane>
+                     <children>
+                        <TextField fx:id="tfTamanho" layoutX="90.0" layoutY="139.0" prefHeight="26.0" prefWidth="50.0" />
+                        <Label layoutX="14.0" layoutY="144.0" text="Tamanho" />
+                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" minWidth="60.0" prefWidth="-1.0" style="&#10;" text="Configuraçoes de Jogo" textAlignment="CENTER" wrapText="false">
+                           <font>
+                              <Font size="18.0" fx:id="x1" />
+                           </font>
+                           <textFill>
+                              <Color blue="0.624" green="0.624" red="0.624" fx:id="x2" />
+                           </textFill>
+                        </Label>
+                        <Button fx:id="criar" layoutX="157.0" layoutY="136.0" mnemonicParsing="false" onAction="#confirmar" prefHeight="29.0" prefWidth="50.0" text="criar" />
+                        <GridPane fx:id="tabelaConfig" layoutX="3.0" layoutY="215.0" prefHeight="90.0" prefWidth="249.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="92.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="109.0" minWidth="10.0" prefWidth="86.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="70.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="31.0" minHeight="10.0" prefHeight="31.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefWidth="74.0" text="Descriçao" />
+                              <Label prefHeight="16.0" prefWidth="68.0" text="Simbolo" GridPane.columnIndex="1" />
+                              <Label prefHeight="16.0" prefWidth="92.0" text="Pontuaçao" GridPane.columnIndex="2" />
+                              <Label prefWidth="74.0" text="Livre" GridPane.rowIndex="1" />
+                              <Label prefWidth="74.0" text="L" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label prefWidth="74.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                              <Label prefHeight="16.0" prefWidth="83.0" text="Porta Aviao" GridPane.rowIndex="2" />
+                              <Label prefHeight="16.0" prefWidth="83.0" text="P" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label prefHeight="16.0" prefWidth="83.0" text="5" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                              <Label text="Sumbarino" GridPane.rowIndex="3" />
+                              <Label text="S" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="5" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                              <Label text="Cruzador" GridPane.rowIndex="4" />
+                              <Label text="C" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <Label text="4" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                              <Label text="Destroyer" GridPane.rowIndex="5" />
+                              <Label text="D" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                              <Label text="3" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane prefHeight="-1.0" prefWidth="-1.0">
+                     <content>
+                        <AnchorPane id="Content" minHeight="-1.0" minWidth="-1.0" prefHeight="545.0" prefWidth="430.0">
+                           <children>
+                              <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Tabuleiro" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                              <GridPane fx:id="grid" alignment="CENTER" layoutX="36.0" layoutY="126.0" prefHeight="30.0" prefWidth="34.0" styleClass="grid" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <AnchorPane>
+                     <children>
+                        <Label alignment="CENTER" font="$x1" layoutX="14.0" layoutY="14.0" style="&#10;" text="Detalhes" textAlignment="CENTER" textFill="$x2" wrapText="false" />
+                        <Button fx:id="criarRede" layoutX="67.0" layoutY="108.0" mnemonicParsing="false" onAction="#criarRede" text="Criar Rede" />
+                        <Button fx:id="pararRede" layoutX="65.0" layoutY="176.0" mnemonicParsing="false" onAction="#pararRede" text="Parar Rede" />
+                     </children>
+                  </AnchorPane>
+               </items>
+            </SplitPane>
+            <HBox id="HBox" alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label maxHeight="1.7976931348623157E308" maxWidth="-1.0" text="Jogo de Batalha naval para disciplina de POO - Eugenio" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font size="11.0" fx:id="x3" />
+                     </font>
+                     <textFill>
+                        <Color blue="0.625" green="0.625" red="0.625" fx:id="x4" />
+                     </textFill>
+                  </Label>
+                  <Pane prefHeight="-1.0" prefWidth="-1.0" HBox.hgrow="ALWAYS" />
+                  <Label font="$x3" maxWidth="-1.0" text="SENAI-FATESG" textFill="$x4" HBox.hgrow="NEVER" />
+               </children>
+               <padding>
+                  <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
