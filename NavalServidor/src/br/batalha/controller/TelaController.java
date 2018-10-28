@@ -1,11 +1,13 @@
 package br.batalha.controller;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
 import javax.swing.JOptionPane;
 
 import br.batalha.model.Jogo;
+import br.servidor.TCPServer;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -104,9 +106,13 @@ public class TelaController implements Initializable {
 	}
 
 	@FXML
-	private void criarRede(ActionEvent event) {
+	private void criarRede(ActionEvent event) throws IOException {
 
-	}
+		TCPServer serv = new TCPServer();
+		serv.startServer(6789);
+		System.out.println("Aguardando Clientes");
+		
+		}
 
 	@FXML
 	private void pararRede(ActionEvent event) {
