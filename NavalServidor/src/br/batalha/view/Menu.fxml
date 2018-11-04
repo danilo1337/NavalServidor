@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="219.0" prefWidth="429.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.batalha.controller.TelaMenu">
+   <children>
+      <Label layoutX="120.0" layoutY="25.0" text="N A V A L   B A T T L E">
+         <font>
+            <Font name="FangSong" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="129.0" text="Tamanho">
+         <font>
+            <Font name="Cambria" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="ok" layoutX="247.0" layoutY="128.0" mnemonicParsing="false" onAction="#confirmar" text="Ok" />
+      <TextField fx:id="tamanho" layoutX="181.0" layoutY="128.0" prefHeight="25.0" prefWidth="52.0" />
+      <Label layoutX="136.0" layoutY="45.0" text="Servidor de Batalha Naval">
+         <font>
+            <Font name="FangSong" size="14.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="163.0" fitWidth="98.0" layoutX="311.0" layoutY="57.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/barco.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="52.0" layoutX="335.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/anchora.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="35.0" fitWidth="52.0" layoutX="77.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/anchora.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

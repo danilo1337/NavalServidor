@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane fx:id="janelaPrincipal" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" style="-fx-background-color: #a6e9f8;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.batalha.controller.TelaJogo">
+   <children>
+      <GridPane fx:id="grid" alignment="CENTER" layoutX="23.0" layoutY="21.0" prefHeight="30.0" prefWidth="34.0" styleClass="grid" />
+   </children>
+</AnchorPane>
